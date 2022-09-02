@@ -1,0 +1,87 @@
+#!/bin/bash
+echo hola Ejercicios para github !
+
+#EJERCICIO 101#
+
+# en linux cada archivo y carpeta tiene una linea de tiempo #
+# hay 3 tipos de marcas de tiempo #
+# atime = tiempo de acesso #
+# mtime = tiempo de modificacion #
+# ctime = tiempo de cambios realizados #
+
+#syntasis touch #
+
+touch [opcion] [nombres]
+
+#crear multiples archivos con touch #
+
+touch nombre_archivo1.txt nombre_archivo2.txt nombre_archivo3.txt
+
+touch nombre_archivo{1...3}.txt
+
+#para cambiar el tiempo de acceso de un archivo #
+
+touch -a nombre_archivo.txt
+
+# para el tiempo de modificacion con touch #
+
+touch -m nombre_archivo1.txt
+
+# cambiar el tiempo de acceso y modificacion con touch #
+
+touch -am nombre_archivo1.txt
+
+# cambiar el tiempo de acceso sin crear nuevo archivo #
+
+touch -c nombre_archivos.txt
+
+# establecer un tiempo de acceso y de modificacion especificos con touch #
+
+touch -t 202208012247.39 nombre_archivo.txt
+
+            #El formato de fecha y hora debe estar en CCYYMMDDhhmm.ss de donde CC:los dos primeros digitos del año YY:los dos segundos digito del año MM:el mes DD:el dia del mes hh:hora mm:minutos ss:segundos #
+
+# cambiar la marca de tiempo de un archivo vinculado simbilicamente #
+
+touch -h archivo_enlace_simbolico
+
+# establecer la marca de tiempo utilizando otro archivo como referencia #
+
+touch -r referencia.txt nombre_archivo.txt
+
+# establecer la fecha y la hora como una cadena de caracteres usando el comando touch #
+
+touch -d '8 Mar' nombre_archivo.txt
+
+touch -d '20:10 'nombre_archivo.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
